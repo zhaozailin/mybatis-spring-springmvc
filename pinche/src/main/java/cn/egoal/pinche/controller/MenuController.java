@@ -16,10 +16,9 @@ public class MenuController {
 	private MenuService manService;
 
 	@RequestMapping(value="/test", method=RequestMethod.GET)
-	@ResponseBody
 	public String getCreateForm(Menu menu) {
-		manService.fun();
-		System.out.println(menu);
-		return null;
+		System.out.println("test mybatis:" + manService.fun());
+		System.out.println("test httpRequest:" + menu);
+		return "showMessage";
 	}
 }

@@ -10,18 +10,9 @@
 		<meta charset="utf-8">
 		<title>Welcome</title>
 		<script type="text/javascript" src="resources/jquery-1.10.2.js"></script>
-		<script type="text/javascript">
-			function fun() {
-				var json = {name:"xx"};
-				$.get("man/test", json, function(result) {
-					console.log(result);
-				}, "json");
-			}
-		</script>
 	</head> 
 	<body>
 		<c:url value="/showMessage.html" var="messageUrl" />
-		<a href="${messageUrl}">Click to enter</a>
-		<input type="button" value="test" onclick="fun()">
+		<a href="man/test?name=xxoo">Click to enter</a>
 	</body>
 </html>
